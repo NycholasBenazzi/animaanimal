@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AniManiMal Pet Store | Banho, Tosa e Estética Pet em Santo André</title>
+<meta name="description" content="Banho, tosa e estética pet com carinho e cuidado. Agende pelo WhatsApp na AniManiMal Pet Store.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#0f4c4a;--teal2:#0b3836;--sun:#ffc531;--mint:#e6f3ef;--paper:#f7fbf9;--ink:#16292a;--mute:#4d6463;--line:#cfe2dc;--wa:#1faa59}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Figtree,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:1rem;font-family:inherit;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-sun{background:var(--sun);color:var(--teal2)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-line{border:2px solid var(--teal);color:var(--teal)}
+header{position:sticky;top:0;z-index:20;background:rgba(247,251,249,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Bricolage Grotesque';font-weight:800;font-size:1.25rem;text-decoration:none;color:var(--teal)}
+.logo svg{width:34px;height:34px}
+nav ul{display:flex;gap:26px;list-style:none;padding:0}
+nav a{text-decoration:none;font-weight:500;color:var(--mute)}
+nav a:hover{color:var(--teal)}
+.nav .btn{padding:10px 18px}
+@media(max-width:820px){nav ul{display:none}}
+/* hero */
+.hero{background:var(--teal);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:84px}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4.4rem);font-weight:800}
+.hero h1 span{color:var(--sun)}
+.hero p.lead{font-size:1.2rem;color:#cfe8e2;margin:20px 0 30px;max-width:30em}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .btn-line{border-color:#7fb5ac;color:#fff}
+.paws{position:absolute;right:-40px;top:-30px;width:360px;opacity:.07;fill:#fff;pointer-events:none}
+.badges{display:flex;gap:22px;flex-wrap:wrap;margin-top:34px;color:#b5d8d0;font-size:.95rem}
+.badges b{color:#fff}
+/* booking card */
+.book{background:#fff;color:var(--ink);border-radius:26px;padding:28px;box-shadow:0 30px 60px -20px rgba(0,0,0,.45)}
+.book h2{font-size:1.5rem;margin-bottom:4px}
+.book p{color:var(--mute);font-size:.95rem;margin-bottom:18px}
+.f{display:grid;gap:6px;margin-bottom:14px}
+.f label{font-weight:700;font-size:.9rem}
+.f input,.f select{padding:12px 14px;border:2px solid var(--line);border-radius:12px;font:inherit;background:var(--paper);width:100%}
+.f input:focus,.f select:focus{border-color:var(--teal);outline:0}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.book .btn{width:100%;justify-content:center}
+.small{font-size:.82rem;color:var(--mute);text-align:center;margin-top:10px}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:48px;padding-bottom:56px}}
+/* sections */
+section{padding:84px 0}
+.head{max-width:36em;margin-bottom:44px}
+.head h2{font-size:clamp(1.9rem,3.8vw,2.8rem)}
+.head p{color:var(--mute);margin-top:12px}
+.serv{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px}
+.card .ic{width:54px;height:54px;border-radius:16px;background:var(--mint);display:grid;place-items:center;font-size:1.7rem;margin-bottom:16px}
+.card h3{font-size:1.3rem;margin-bottom:8px}
+.card p{color:var(--mute);font-size:.98rem}
+.card.big{grid-column:span 2;background:var(--sun);border-color:var(--sun)}
+.card.big .ic{background:rgba(255,255,255,.55)}
+.card.big p{color:#4a3d0a}
+@media(max-width:860px){.serv{grid-template-columns:1fr}.card.big{grid-column:auto}}
+.mint{background:var(--mint)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{position:relative;padding-top:58px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:0;left:0;width:44px;height:44px;border-radius:50%;background:var(--teal);color:var(--sun);display:grid;place-items:center;font-family:'Bricolage Grotesque';font-weight:800;font-size:1.2rem}
+.step h3{font-size:1.15rem;margin-bottom:6px}
+.step p{color:var(--mute);font-size:.96rem}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.why ul{list-style:none;padding:0;display:grid;gap:18px}
+.why li{display:flex;gap:14px}
+.why li i{flex:none;width:28px;height:28px;border-radius:50%;background:var(--teal);color:var(--sun);display:grid;place-items:center;font-style:normal;font-weight:800;font-size:.9rem;margin-top:2px}
+.why li b{display:block}
+.why li span{color:var(--mute);font-size:.96rem}
+.quote{background:var(--teal);color:#fff;border-radius:28px;padding:44px}
+.quote h2{font-size:2rem;margin-bottom:14px}
+.quote p{color:#cfe8e2;margin-bottom:24px}
+@media(max-width:860px){.why{grid-template-columns:1fr;gap:34px}}
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.loc .card h3{margin-bottom:12px}
+.loc dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px}
+.loc dt{font-weight:700}
+.loc dd{color:var(--mute)}
+@media(max-width:760px){.loc{grid-template-columns:1fr}}
+footer{background:var(--teal2);color:#b5d8d0;padding:36px 0;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--sun)}
+.fab{position:fixed;right:18px;bottom:18px;z-index:30;box-shadow:0 10px 24px rgba(0,0,0,.3)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media(prefers-reduced-motion:no-preference){.hero .book{animation:rise .7s ease-out both}@keyframes rise{from{opacity:0;transform:translateY(24px)}}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap nav">
+  <a class="logo" href="#top" aria-label="AniManiMal Pet Store">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="#ffc531"/><g fill="#0f4c4a"><ellipse cx="32" cy="41" rx="10" ry="8.5"/><ellipse cx="19" cy="30" rx="4.5" ry="6"/><ellipse cx="29" cy="22" rx="4.5" ry="6"/><ellipse cx="40" cy="22" rx="4.5" ry="6"/><ellipse cx="49" cy="30" rx="4.5" ry="6"/></g></svg>
+    AniManiMal
+  </a>
+  <nav aria-label="Principal"><ul>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#como">Como funciona</a></li>
+    <li><a href="#diferenciais">Diferenciais</a></li>
+    <li><a href="#contato">Onde estamos</a></li>
+  </ul></nav>
+  <a class="btn btn-wa" data-wa href="#">Agendar</a>
+</div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <svg class="paws" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="41" rx="10" ry="8.5"/><ellipse cx="19" cy="30" rx="4.5" ry="6"/><ellipse cx="29" cy="22" rx="4.5" ry="6"/><ellipse cx="40" cy="22" rx="4.5" ry="6"/><ellipse cx="49" cy="30" rx="4.5" ry="6"/></svg>
+  <div class="wrap">
+    <div>
+      <h1>Seu pet sai daqui <span>cheiroso, feliz</span> e bem cuidado.</h1>
+      <p class="lead">Banho, tosa e estética pet feitos com paciência e carinho, do jeito que seu melhor amigo merece.</p>
+      <div class="cta">
+        <a class="btn btn-sun" href="#agendar">Agendar horário</a>
+        <a class="btn btn-line" href="#servicos">Ver serviços</a>
+      </div>
+      <div class="badges">
+        <span><b>Atendimento com hora marcada</b></span>
+        <span><b>Cães e gatos</b></span>
+        <span><b>Produtos pet na loja</b></span>
+      </div>
+    </div>
+
+    <form class="book" id="agendar" aria-labelledby="bk">
+      <h2 id="bk">Agende em 30 segundos</h2>
+      <p>Preencha e a gente confirma o horário pelo WhatsApp.</p>
+      <div class="f"><label for="tutor">Seu nome</label><input id="tutor" autocomplete="name" placeholder="Ex.: Mariana"></div>
+      <div class="row">
+        <div class="f"><label for="pet">Nome do pet</label><input id="pet" placeholder="Ex.: Thor"></div>
+        <div class="f"><label for="esp">Espécie</label><select id="esp"><option>Cachorro</option><option>Gato</option></select></div>
+      </div>
+      <div class="row">
+        <div class="f"><label for="porte">Porte</label><select id="porte"><option>Pequeno</option><option>Médio</option><option>Grande</option></select></div>
+        <div class="f"><label for="serv">Serviço</label><select id="serv"><option>Banho</option><option>Banho e tosa</option><option>Tosa higiênica</option><option>Hidratação</option><option>Outro</option></select></div>
+      </div>
+      <button class="btn btn-wa" type="submit">Enviar pelo WhatsApp</button>
+      <p class="small">Você será levado ao WhatsApp com a mensagem pronta.</p>
+    </form>
+  </div>
+</div>
+
+<section id="servicos">
+<div class="wrap">
+  <div class="head"><h2>Tudo para o bem-estar do seu pet</h2><p>Serviços de estética e higiene feitos por quem entende de bicho e trata cada um como único.</p></div>
+  <div class="serv">
+    <article class="card big"><div class="ic" aria-hidden="true">🛁</div><h3>Banho e tosa</h3><p>Banho com produtos adequados ao tipo de pelo e à pele do seu pet, secagem cuidadosa e tosa na máscara que você escolher: higiênica, na tesoura, na máquina ou padrão da raça.</p></article>
+    <article class="card"><div class="ic" aria-hidden="true">✨</div><h3>Estética pet</h3><p>Hidratação, escovação, corte de unhas, limpeza de ouvidos e perfume suave.</p></article>
+    <article class="card"><div class="ic" aria-hidden="true">🐱</div><h3>Cuidado com gatos</h3><p>Manejo calmo e sem pressa, para reduzir o estresse dos felinos.</p></article>
+    <article class="card"><div class="ic" aria-hidden="true">🦴</div><h3>Pet store</h3><p>Rações, petiscos, brinquedos e acessórios para o dia a dia do seu pet.</p></article>
+    <article class="card"><div class="ic" aria-hidden="true">🚗</div><h3>Leva e traz</h3><p>Consulte a disponibilidade de busca e entrega do seu pet na sua região.</p></article>
+  </div>
+</div>
+</section>
+
+<section id="como" class="mint">
+<div class="wrap">
+  <div class="head"><h2>Como funciona</h2><p>Simples para você, tranquilo para o seu pet.</p></div>
+  <div class="steps">
+    <div class="step"><h3>Você agenda</h3><p>Escolha o serviço e o horário pelo WhatsApp.</p></div>
+    <div class="step"><h3>Seu pet chega</h3><p>Recebemos com calma e conversamos sobre o que ele precisa.</p></div>
+    <div class="step"><h3>Cuidamos de tudo</h3><p>Banho, tosa e acabamento com carinho do começo ao fim.</p></div>
+    <div class="step"><h3>Aviso de retirada</h3><p>Quando estiver pronto, você recebe uma mensagem para buscar.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="diferenciais">
+<div class="wrap why">
+  <div>
+    <div class="head" style="margin-bottom:28px"><h2>Por que os tutores voltam</h2></div>
+    <ul>
+      <li><i>✓</i><div><b>Atenção individual</b><span>Cada pet tem seu ritmo, seu tipo de pelo e suas manias. Respeitamos tudo isso.</span></div></li>
+      <li><i>✓</i><div><b>Higiene e segurança</b><span>Ambiente limpo, materiais higienizados e manejo cuidadoso.</span></div></li>
+      <li><i>✓</i><div><b>Atendimento direto e rápido</b><span>Falou no WhatsApp, a gente responde e confirma o horário.</span></div></li>
+      <li><i>✓</i><div><b>Banho, tosa e loja no mesmo lugar</b><span>Resolva o serviço e já leve a ração ou o petisco do mês.</span></div></li>
+    </ul>
+  </div>
+  <div class="quote">
+    <h2>Pronto para deixar seu pet de banho tomado?</h2>
+    <p>Chame no WhatsApp, conte o porte e o tipo de pelo e receba o valor e os horários disponíveis.</p>
+    <a class="btn btn-sun" data-wa href="#">Chamar no WhatsApp</a>
+  </div>
+</div>
+</section>
+
+<section id="contato" class="mint">
+<div class="wrap">
+  <div class="head"><h2>Onde estamos</h2><p>Venha conhecer a loja ou chame no WhatsApp.</p></div>
+  <div class="loc">
+    <div class="card"><h3>Informações</h3>
+      <dl>
+        <dt>Endereço</dt><dd id="end">Santo André – SP</dd>
+        <dt>Horário</dt><dd id="hor">Consulte pelo WhatsApp</dd>
+        <dt>WhatsApp</dt><dd id="tel">Chame para agendar</dd>
+        <dt>Instagram</dt><dd><a id="ig" href="#">@animanimalpetstore</a></dd>
+      </dl>
+    </div>
+    <div class="card"><h3>Como chegar</h3>
+      <p style="margin-bottom:18px">Abra a rota direto no Google Maps e venha com seu pet.</p>
+      <a class="btn btn-teal btn-sun" id="maps" href="https://maps.app.goo.gl/sLrezBTqPWT2jk1z8" target="_blank" rel="noopener">Abrir no Google Maps</a>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+  <span>© <span id="ano"></span> AniManiMal Pet Store. Todos os direitos reservados.</span>
+  <span>Site criado por <a href="#" id="autor">seu nome ou marca</a></span>
+</div>
+</footer>
+
+<a class="btn btn-wa fab" data-wa href="#" aria-label="Falar no WhatsApp">WhatsApp</a>
+
+<script>
+/* ===== EDITE AQUI OS DADOS REAIS DO CLIENTE ===== */
+const CONFIG = {
+  whatsapp: "5511900000000",              // DDI + DDD + número, só dígitos
+  endereco: "Santo André – SP",           // endereço completo
+  horario:  "Seg a Sáb, 9h às 18h",       // confirmar com o cliente
+  telefone: "(11) 90000-0000",
+  instagram: "https://instagram.com/",    // link do perfil do cliente
+  instagramTexto: "@animanimalpetstore",  // confirmar @ real
+  autorNome: "Seu nome ou marca",
+  autorLink: "#"
+};
+/* ================================================= */
+const wa = (t) => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(t)}`;
+document.querySelectorAll("[data-wa]").forEach(a=>{
+  a.href = wa("Olá! Vim pelo site e gostaria de agendar um horário para o meu pet.");
+  a.target = "_blank"; a.rel = "noopener";
+});
+document.getElementById("end").textContent = CONFIG.endereco;
+document.getElementById("hor").textContent = CONFIG.horario;
+document.getElementById("tel").textContent = CONFIG.telefone;
+const ig = document.getElementById("ig"); ig.href = CONFIG.instagram; ig.textContent = CONFIG.instagramTexto;
+const au = document.getElementById("autor"); au.textContent = CONFIG.autorNome; au.href = CONFIG.autorLink;
+document.getElementById("ano").textContent = new Date().getFullYear();
+document.getElementById("agendar").addEventListener("submit", e=>{
+  e.preventDefault();
+  const v = id => document.getElementById(id).value.trim();
+  const msg = `Olá! Meu nome é ${v("tutor")||"(nome)"}. Quero agendar ${v("serv").toLowerCase()} para o(a) ${v("pet")||"meu pet"} (${v("esp").toLowerCase()}, porte ${v("porte").toLowerCase()}). Quais horários vocês têm disponíveis?`;
+  window.open(wa(msg), "_blank", "noopener");
+});
+</script>
+</body>
+</html>
